@@ -12,3 +12,31 @@ body {
 body a {
     text-decoration: none;
 }
+
+#flavors {
+    text-align: left;
+}
+
+#flavors h1 {
+    text-align: center;
+}
+
+.flavor-container {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    border-width: 1px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.flavor-container img {
+    width: 100%;
+}
+
+.flavor-container .label {
+    text-align: center;
+    margin-top: 10px;
+}
