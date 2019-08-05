@@ -1,3 +1,7 @@
+header {
+    background-image: url('images/popcorn.jpg')
+}
+
 body {
     text-align: center;
 }
@@ -7,6 +11,9 @@ body {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(68, 39, 18);
+    background-color: rgb(252, 225, 229);
 }
 
 body a {
@@ -23,14 +30,15 @@ body a {
 
 .flavor-container {
     display: inline-block;
-    width: 150px;
-    height: 200px;
-    border-style: solid;
+    width: 15em;
+    height: 20em;
+    border-style: none;
     border-color: #CCCCCC;
     border-width: 1px;
     padding: 20px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
 }
 .flavor-container img {
     width: 100%;
@@ -39,4 +47,11 @@ body a {
 .flavor-container .label {
     text-align: center;
     margin-top: 10px;
+}
+
+.textbar {
+    color: #FFFFFF;
+    background-color: rgb(68, 39, 18);
+    margin: 0;
+    padding: 20px 0 20px 0;
 }
