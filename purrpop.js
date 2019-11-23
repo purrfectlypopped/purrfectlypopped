@@ -1,3 +1,27 @@
+class Flavor {
+    popName = "";
+    image = null;
+    properties = [];
+
+    constructor(popName, image, properties = []) {
+        this.popName = popName;
+        this.image = image;
+        this.properties = properties;
+    }
+
+    generateElement() {
+        let element = document.createElement('div');
+        element.classList.add('flavor-container');
+        element.innerHTML = `
+            <div>
+                <img src="./images/flavors/${this.image}" />
+            </div>
+            <span class="label">${this.popName}</span>
+        `;
+        return element;
+    }
+}
+
 let ps = {
     Caramel: 'caramel',
     Spicy: 'spicy',
@@ -6,7 +30,7 @@ let ps = {
     Cheese: 'cheese',
     Nuts: 'nuts',
     GF: 'gf'
-}
+};
 
 let flavors = [];
 
@@ -53,7 +77,7 @@ let init = () => {
     document.getElementById('filterSpicy').onclick = () => showFlavors(filterByProperty(flavors, ps.Spicy));
     document.getElementById('filterCaramel').onclick = () => showFlavors(filterByProperty(flavors, ps.Caramel));
     
-}
+};
 
 function showFlavors(flavorList) {
     let flavorContainer = document.getElementById('flavors');
@@ -71,31 +95,6 @@ function filterByProperty(flavors, property) {
 
 let sorts = {
     alphabetically: (a, b) => { return a.name.localeCompare(b.name) }
-}
-
-
-class Flavor {
-    name;
-    image;
-    properties;
-
-    constructor(name, image, properties = []) {
-        this.name = name;
-        this.image = image;
-        this.properties = properties;
-    }
-
-    generateElement() {
-        let element = document.createElement('div');
-        element.classList.add('flavor-container');
-        element.innerHTML = `
-            <div>
-                <img src="./images/flavors/${this.image}" />
-            </div>
-            <span class="label">${this.name}</span>
-        `
-        return element;
-    }
-}
+};
 
 init();
