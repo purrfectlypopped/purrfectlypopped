@@ -94,7 +94,7 @@ function filterByProperty(flavors, property) {
 }
 
 let sorts = {
-    alphabetically: (a, b) => { return a.name.localeCompare(b.name) }
+    alphabetically: (a, b) => { return a.popName.localeCompare(b.popName) }
 };
 
 init();
